@@ -64,56 +64,62 @@ const UpdateQuestion = () => {
   }
 
   return (
-    <div className="container">
-      <h4 className="mt-5" style={{ color: "GrayText" }}>
-        Update Quiz Question
-      </h4>
-      <div className="col-8">
-        <form onSubmit={handleUpdate}>
-          <div className="form-group">
-            <label className="text-info">Question:</label>
-            <textarea
-              className="form-control"
-              rows={4}
-              value={question}
-              onChange={handleQuestionChange}
-            ></textarea>
-          </div>
+    <div className="container" style={{paddingLeft:"600px",width:"1000px"}}>
+      <div className="row justify-content-center mt-5">
+        <div className="col-md-20">
+          <div className="card">
+            <div className="card-header bg-info text-white">
+              <h4 className="card-title">Update Quiz Question</h4>
+            </div>
+            <div className="card-body">
+              <form onSubmit={handleUpdate}>
+                <div className="mb-3">
+                  <label className="form-label text-info">Question:</label>
+                  <textarea
+                    className="form-control"
+                    rows={4}
+                    value={question}
+                    onChange={handleQuestionChange}
+                  ></textarea>
+                </div>
 
-          <div className="form-group">
-            <label className="text-info">Choices:</label>
-            {choices.map((choice, index) => (
-              <input
-                key={index}
-                type="text"
-                className="form-control mb-4"
-                value={choice.choiceValue}
-                onChange={(e) => handleChoiceChange(index, e)}
-              />
-            ))}
-          </div>
-          <div className="form-group">
-            <label className="text-info">Correct Answer(s):</label>
-            {correctAnswers.map((answer, index) => (
-              <input
-                key={index}
-                type="text"
-                className="form-control mb-4"
-                value={answer.correctAnswerValue}
-                onChange={(e) => handleCorrectAnswerChange(index, e)}
-              />
-            ))}
-          </div>
+                <div className="mb-3">
+                  <label className="form-label text-info">Choices:</label>
+                  {choices.map((choice, index) => (
+                    <input
+                      key={index}
+                      type="text"
+                      className="form-control mb-3"
+                      value={choice.choiceValue}
+                      onChange={(e) => handleChoiceChange(index, e)}
+                    />
+                  ))}
+                </div>
+                <div className="mb-3">
+                  <label className="form-label text-info">Correct Answer(s):</label>
+                  {correctAnswers.map((answer, index) => (
+                    <input
+                      key={index}
+                      type="text"
+                      className="form-control mb-3"
+                      value={answer.correctAnswerValue}
+                      onChange={(e) => handleCorrectAnswerChange(index, e)}
+                    />
+                  ))}
+                </div>
 
-          <div className="btn-group">
-            <button type="submit" className="btn btn-sm btn-outline-warning">
-              Update question
-            </button>
-            <Link to={"/all-quizzes"} className="btn btn-outline-primary ml-2">
-              Back to all questions
-            </Link>
+                <div className="btn-group">
+                  <button type="submit" className="btn btn-warning">
+                    Update Question
+                  </button>
+                  <Link to={"/all-quizzes"} className="btn btn-primary ml-2">
+                    Back to All Questions
+                  </Link>
+                </div>
+              </form>
+            </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );
