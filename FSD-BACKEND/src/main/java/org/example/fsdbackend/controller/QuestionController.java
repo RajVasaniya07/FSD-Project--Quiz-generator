@@ -17,7 +17,7 @@ import java.util.Optional;
 import static org.springframework.http.HttpStatus.CREATED;
 
 /**
- * Controller class to handle endpoints related to questions.
+ * Controller class to handle endpoints related to 
  */
 @CrossOrigin("http://localhost:5173")
 @RestController
