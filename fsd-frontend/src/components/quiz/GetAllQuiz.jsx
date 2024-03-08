@@ -38,7 +38,7 @@ const GetAllQuiz = () => {
     };
 
     if (isLoading) {
-        return <p>Loading...</p>;
+        return <center><p>Loading...</p></center>;
     }
 
     return (
