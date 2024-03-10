@@ -24,7 +24,7 @@ public class Choice {
         this.choiceValue = choiceValue;
     }
 
-    // Default constructor
+   
     public Choice() {
     }
 
