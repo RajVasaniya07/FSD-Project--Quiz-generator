@@ -19,7 +19,7 @@ public class CorrectAnswer {
     @NotBlank
     private String correctAnswerValue;
 
-    
+
     public CorrectAnswer(String correctAnswerValue) {
         this.correctAnswerValue = correctAnswerValue;
     }

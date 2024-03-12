@@ -52,7 +52,7 @@ const QuizStepper = () => {
                 return (
 					
                     <div style={{width:"1000px",height: "200px" }} >
-                        <h3 className="text-black mb-2">Step 1: I want to take a quiz on :</h3>
+                        <h3 className="text-black mb-2">Step 1: Select a subject from the options below to begin your quiz adventure! :</h3>
 
                         <select
                             className="form-select"
@@ -71,7 +71,7 @@ const QuizStepper = () => {
             case 2:
                 return (
                     <div style={{width:"1000px",height: "200px" }}>
-                        <h3 className="text-black mb-2">Step 2: How many questions would you like to attempt ?</h3>
+                        <h3 className="text-black mb-2">Step 2:How many questions would you like to tackle?</h3>
                         <input
                             type="number"
                             className="form-control"
@@ -84,7 +84,8 @@ const QuizStepper = () => {
             case 3:
                 return (
                     <div style={{width:"1000px",height: "200px" }}>
-                        <h3 className="text-black mb-2">Step 3: Confirmation</h3>
+                        <h3 className="text-black mb-2">Step 3: 
+Confirm your selected subject and number of questions. If you need to make changes, click 'Back'.</h3>
 						<p>Subject: <span style={{ color: "red" }}>{selectedSubject}</span></p>
 
 						<p>Number of Questions: <span style={{ color: "red" }}>{selectedNumQuestions}</span></p>

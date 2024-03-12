@@ -68,13 +68,13 @@ const UpdateQuestion = () => {
       <div className="row justify-content-center mt-5">
         <div className="col-md-20">
           <div className="card">
-            <div className="card-header bg-info text-white">
-              <h4 className="card-title">Update Quiz Question</h4>
+            <div className="card-header bg-primary text-white">
+              <h4 className="card-title mb-0">Update Quiz Question</h4>
             </div>
             <div className="card-body">
               <form onSubmit={handleUpdate}>
                 <div className="mb-3">
-                  <label className="form-label text-info">Question:</label>
+                  <label className="form-label text-primary">Question:</label>
                   <textarea
                     className="form-control"
                     rows={4}
@@ -84,7 +84,7 @@ const UpdateQuestion = () => {
                 </div>
 
                 <div className="mb-3">
-                  <label className="form-label text-info">Choices:</label>
+                  <label className="form-label text-primary">Choices:</label>
                   {choices.map((choice, index) => (
                     <input
                       key={index}
@@ -96,7 +96,7 @@ const UpdateQuestion = () => {
                   ))}
                 </div>
                 <div className="mb-3">
-                  <label className="form-label text-info">Correct Answer(s):</label>
+                  <label className="form-label text-primary">Correct Answer(s):</label>
                   {correctAnswers.map((answer, index) => (
                     <input
                       key={index}
