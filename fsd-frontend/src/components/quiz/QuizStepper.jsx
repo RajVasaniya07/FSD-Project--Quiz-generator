@@ -128,7 +128,7 @@ const QuizStepper = () => {
                     <div className="d-flex justify-content-between mt-4">
                         {currentStep > 1 && (
                             <button className="btn btn-primary" onClick={handlePrevious}>
-                                Previous
+                                Back
                             </button>
                         )}
                         {currentStep < 3 && (
