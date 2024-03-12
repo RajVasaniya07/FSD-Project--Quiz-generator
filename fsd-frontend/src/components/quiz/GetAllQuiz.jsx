@@ -37,9 +37,9 @@ const GetAllQuiz = () => {
         }, 4000);
     };
 
-    if (isLoading) {
-        return <center><p>Loading...</p></center>;
-    }
+    // if (isLoading) {
+    //     return <center><p>Loading...</p></center>;
+    // }
 
     return (
         <section className="container my-5"  style={{paddingLeft:"600px"}}>

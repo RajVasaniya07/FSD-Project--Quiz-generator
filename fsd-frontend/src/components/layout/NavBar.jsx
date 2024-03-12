@@ -9,7 +9,7 @@ const Navbar = () => {
     <span className="text-2xl font-bold text-white mr-2">
         <i className="fas fa-graduation-cap"></i>
     </span>
-    <span className="text-xl font-semibold text-white">QuizMaster</span>
+    <span className="text-xl font-semibold text-white">Quizify</span>
 </NavLink>
 
                 <button

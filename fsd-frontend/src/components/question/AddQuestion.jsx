@@ -88,17 +88,19 @@ const AddQuestion = () => {
     };
 
     return (
-        <div className="container" style={{width:"1000px"}}>
+        <div className="container py-5" style={{width:"700px",marginLeft:"400px"}}>
             <div className="row justify-content-center">
-                <div className="col-md-20">
-                    <div className="card border-0 shadow-lg" style={{marginLeft:"600px"}}>
-                        <div className="card-header bg-info text-white">
-                            <h5 className="card-title">Add New Quiz</h5>
+                <div className="col-md-8">
+                    <div className="card">
+                    <div className="card-header bg-primary text-white">
+
+                            <center><h5 className="card-title mb-0">Add New Quiz</h5></center>
                         </div>
                         <div className="card-body">
                             <form onSubmit={handleSubmit}>
                                 <div className="mb-3">
-                                    <label htmlFor="subject" className="form-label text-info">
+                                <label htmlFor="subject"  className="form-label text-primary">
+
                                         Select a Subject
                                     </label>
                                     <select
@@ -107,8 +109,8 @@ const AddQuestion = () => {
                                         onChange={(e) => setSubject(e.target.value)}
                                         className="form-control"
                                     >
-                                        <option value="">Select subject or topic</option>
-                                        <option value={"New"}>Add New subject or topic</option>
+                                        <option value="" style={{ color: 'red' }} >Select subject or topic</option>
+                                        <option value={"New"}  style={{ color: 'red' }}>Add New subject or topic</option>
                                         {subjectOptions.map((option) => (
                                             <option key={option} value={option}>
                                                 {option}
@@ -119,7 +121,7 @@ const AddQuestion = () => {
 
                                 {subject === "New" && (
                                     <div className="mb-3">
-                                        <label htmlFor="new-subject" className="form-label text-info">
+                                        <label htmlFor="new-subject"  className="form-label text-primary">
                                             Add New Subject or topic here
                                         </label>
                                         <input
@@ -132,14 +134,15 @@ const AddQuestion = () => {
                                         <button
                                             type="button"
                                             onClick={handleAddSubject}
-                                            className="btn btn-outline-info mt-2"
+                                            
+                                            className="btn btn-outline-primary mt-2"
                                         >
                                             Add Subject
                                         </button>
                                     </div>
                                 )}
                                 <div className="mb-3">
-                                    <label htmlFor="question-text" className="form-label text-info">
+                                    <label htmlFor="question-text" className="form-label text-primary">
                                         Question
                                     </label>
                                     <textarea
@@ -150,7 +153,7 @@ const AddQuestion = () => {
                                     ></textarea>
                                 </div>
                                 <div className="mb-3">
-                                    <label htmlFor="question-type" className="form-label text-info">
+                                    <label htmlFor="question-type" className="form-label text-primary">
                                         Question type
                                     </label>
                                     <select
@@ -159,8 +162,8 @@ const AddQuestion = () => {
                                         onChange={(event) => setQuestionType(event.target.value)}
                                         className="form-control"
                                     >
-                                        <option value="single">Single Answer</option>
-                                        <option value="multiple">Multiple Answer</option>
+                                        <option value="single" style={{color:"red"}}>Single Answer</option>
+                                        <option value="multiple" style={{color:"red"}}>Multiple Answer</option>
                                     </select>
                                 </div>
                                 <div className="mb-3">
@@ -232,7 +235,7 @@ const AddQuestion = () => {
                                         ))}
                                         <button
                                             type="button"
-                                            className="btn btn-outline-info"
+                                            className="btn btn-outline-primary mt-2"
                                             onClick={handleAddCorrectAnswer}
                                         >
                                             Add Correct Answer
