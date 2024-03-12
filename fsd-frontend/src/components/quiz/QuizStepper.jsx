@@ -50,7 +50,8 @@ const QuizStepper = () => {
         switch (currentStep) {
             case 1:
                 return (
-                    <div style={{width:"1000px",height: "200px",marginLeft:"" }} >
+					
+                    <div style={{width:"1000px",height: "200px" }} >
                         <h3 className="text-black mb-2">Step 1: I want to take a quiz on :</h3>
 
                         <select
@@ -69,7 +70,7 @@ const QuizStepper = () => {
                 );
             case 2:
                 return (
-                    <div style={{width:"1200px"}}>
+                    <div style={{width:"1000px",height: "200px" }}>
                         <h3 className="text-black mb-2">Step 2: How many questions would you like to attempt ?</h3>
                         <input
                             type="number"
@@ -82,7 +83,7 @@ const QuizStepper = () => {
                 );
             case 3:
                 return (
-                    <div style={{width:"1200px"}}>
+                    <div style={{width:"1000px",height: "200px" }}>
                         <h3 className="text-black mb-2">Step 3: Confirmation</h3>
 						<p>Subject: <span style={{ color: "red" }}>{selectedSubject}</span></p>
 
@@ -107,7 +108,7 @@ const QuizStepper = () => {
     };
 
     return (
-        <section className="mt-5">
+        <section className="mt-5" style={{marginLeft:"250px"}}>
             <h3 className="text-primary mb-4">Welcome to Quizify</h3>
             <div className="progress">
                 <div

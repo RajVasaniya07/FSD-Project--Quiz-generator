@@ -25,12 +25,12 @@ const Sign_in = () => {
     };
 
     return (
-        <div className="container-fluid mt-5 " style={{marginLeft:"420px"}}>
+        <div className="container-fluid mt-5 " style={{marginLeft:"400px"}}>
             <div className="row justify-content-center">
                 <div className="col-md-8">
                     <div className="card">
                         <div className="card-body">
-                            <h3 className="card-title text-center mb-4">Welcome Back Admin</h3>
+                            <h3 className="card-title text-center mb-4">Welcome Back Admin!</h3>
                             <p className="text-center text-muted">Login</p>
                             {error && <p className="text-danger text-center mb-3">{error}</p>}
                             <form onSubmit={handleSubmit}>

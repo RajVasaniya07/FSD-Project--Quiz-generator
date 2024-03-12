@@ -116,42 +116,42 @@ const Quiz = () => {
     };
 
     return (
-        <div className="container mt-5" style={{marginLeft:"550px"}}>
-            <h3  className="form-label text-primary">
-                Question {quizQuestions.length > 0 ? currentQuestionIndex + 1 : 0} of {quizQuestions.length}
-            </h3>
+        <div className="container mt-5" style={{ width: "500px", margin: "0 auto", marginLeft: "500px" }}>
+            <div style={{ border: "1px solid black", padding: "10px", borderRadius: "10px", margin: "20px" }}>
+                <h3 className="form-label text-primary">
+                    Question {quizQuestions.length > 0 ? currentQuestionIndex + 1 : 0} of {quizQuestions.length}
+                </h3>
 
-            <h4 className="mb-4">
-                <pre>{quizQuestions[currentQuestionIndex]?.question}</pre>
-            </h4>
+                <h4 className="mb-4">{quizQuestions[currentQuestionIndex]?.question}</h4>
 
-            <AnswerOptions
-                question={quizQuestions[currentQuestionIndex]}
-                isChecked={isChecked}
-                handleAnswerChange={handleAnswerChange}
-                handleCheckboxChange={handleCheckboxChange}
-            />
+                <AnswerOptions
+                    question={quizQuestions[currentQuestionIndex]}
+                    isChecked={isChecked}
+                    handleAnswerChange={handleAnswerChange}
+                    handleCheckboxChange={handleCheckboxChange}
+                />
 
-            <div className="mt-4">
-                <button
-                    className="btn btn-sm btn-primary me-2"
-                    onClick={handlePreviousQuestion}
-                    disabled={currentQuestionIndex === 0}>
-                    Previous question
-                </button>
-                <button
-                    className={`btn btn-sm btn-success ${
-                        currentQuestionIndex === quizQuestions.length - 1 && "btn btn-sm btn-warning"
-                    }`}
-                    onClick={handleNextQuestion}
-                    disabled={
-                        !selectedAnswers.find(
-                            (answer) =>
-                                answer.id === quizQuestions[currentQuestionIndex]?.id || answer.answer.length > 0
-                        )
-                    }>
-                    {currentQuestionIndex === quizQuestions.length - 1 ? "Submit quiz" : "Next question"}
-                </button>
+                <div className="mt-4">
+                    <button
+                        className="btn btn-sm btn-primary me-2"
+                        onClick={handlePreviousQuestion}
+                        disabled={currentQuestionIndex === 0}>
+                        Previous question
+                    </button>
+                    <button
+                        className={`btn btn-sm btn-success ${
+                            currentQuestionIndex === quizQuestions.length - 1 && "btn btn-sm btn-warning"
+                        }`}
+                        onClick={handleNextQuestion}
+                        disabled={
+                            !selectedAnswers.find(
+                                (answer) =>
+                                    answer.id === quizQuestions[currentQuestionIndex]?.id || answer.answer.length > 0
+                            )
+                        }>
+                        {currentQuestionIndex === quizQuestions.length - 1 ? "Submit quiz" : "Next question"}
+                    </button>
+                </div>
             </div>
         </div>
     );
