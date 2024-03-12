@@ -19,7 +19,7 @@ public class CorrectAnswer {
     @NotBlank
     private String correctAnswerValue;
 
-    // Constructor with String argument
+    
     public CorrectAnswer(String correctAnswerValue) {
         this.correctAnswerValue = correctAnswerValue;
     }

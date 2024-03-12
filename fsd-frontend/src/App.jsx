@@ -10,6 +10,7 @@ import AddQuestion from "./components/question/AddQuestion"
 import UpdateQuestion from "./components/question/UpdateQuestion"
 import Navbar from "./components/layout/NavBar"
 import Admin from "./components/Admin"
+import Sign_in from "./components/layout/Sign_in"
 
 function App() {
 	return (
@@ -21,6 +22,8 @@ function App() {
 					<Route path="/quiz-stepper" element={<QuizStepper />} />
 					<Route path="/take-quiz" element={<Quiz />} />
 					<Route path="/admin" element={<Admin />} />
+					
+					<Route path="/login" element={<Sign_in />} />
 
 					<Route path="/create-quiz" element={<AddQuestion />} />
 					<Route path="/update-quiz/:id" element={<UpdateQuestion />} />
